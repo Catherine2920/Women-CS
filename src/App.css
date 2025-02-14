@@ -1,38 +1,103 @@
-.App {
-  text-align: center;
+:root {
+  --backgroundColour: #1E1E1E;
+  --color1: 208, 47, 94;  /* Light Pink */
+  --color2: 165, 43, 88;  /* Dark Pink */
+  --color3: 43, 27, 67;   /* The Blue */
+  --color4: 54, 15, 44;   /* Darkest Purple */
+  --color5: 49, 12, 57;   /* Dark Purple */
+  --color-interactive: 80, 44, 82;  /* Grey Purple */
+  --blending: hard-light;
+  --circle-size: 400px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--backgroundColour);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.gradient-bg {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.gradients-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: blur(40px);
 }
 
-.App-link {
-  color: #61dafb;
+.g1, .g2, .g3, .g4, .g5, .interactive {
+  position: absolute;
+  width: var(--circle-size);
+  height: var(--circle-size);
+  border-radius: 50%;
+  mix-blend-mode: var(--blending);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.g1 {
+  background: radial-gradient(circle, rgba(var(--color1), 0.8) 0%, rgba(var(--color1), 0) 50%);
+  top: 20%;
+  left: 30%;
+  animation: moveVertical 30s ease infinite;
+}
+
+.g2 {
+  background: radial-gradient(circle, rgba(var(--color2), 0.8) 0%, rgba(var(--color2), 0) 50%);
+  top: 50%;
+  left: 60%;
+  animation: moveInCircle 20s reverse infinite;
+}
+
+.g3 {
+  background: radial-gradient(circle, rgba(var(--color3), 0.8) 0%, rgba(var(--color3), 0) 50%);
+  top: 70%;
+  left: 20%;
+  animation: moveInCircle 40s linear infinite;
+}
+
+.g4 {
+  background: radial-gradient(circle, rgba(var(--color4), 0.8) 0%, rgba(var(--color4), 0) 50%);
+  top: 40%;
+  left: 50%;
+  animation: moveHorizontal 40s ease infinite;
+}
+
+.g5 {
+  background: radial-gradient(circle, rgba(var(--color5), 0.8) 0%, rgba(var(--color5), 0) 50%);
+  top: 30%;
+  left: 10%;
+  animation: moveInCircle 20s ease infinite;
+}
+
+.interactive {
+  background: radial-gradient(circle, rgba(var(--color-interactive), 0.8) 0%, rgba(var(--color-interactive), 0) 50%);
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
+
+@keyframes moveInCircle {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(180deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes moveVertical {
+  0% { transform: translateY(-30px); }
+  50% { transform: translateY(30px); }
+  100% { transform: translateY(-30px); }
+}
+
+@keyframes moveHorizontal {
+  0% { transform: translateX(-30px); }
+  50% { transform: translateX(30px); }
+  100% { transform: translateX(-30px); }
 }
