@@ -12,23 +12,28 @@
   --circle-size: 300px; /* Slightly smaller size for dynamic effect */
 }
 
-body, html {
+body {
   font-family: 'Orbitron', sans-serif;
   margin: 0;
   padding: 0;
-  height: 100%;
+  min-height: 100%;  /* Ensures content takes at least the full height */
   background-color: var(--backgroundColour);
-  
-  overflow-x: hidden; /* Prevents horizontal scroll issues */
+  overflow-x: hidden;  /* Keeps horizontal overflow hidden */
+  overflow-y: auto;    /* Ensure vertical scrolling is allowed */
 }
 
-
-
+html {
+  height: 100%;  /* Ensure html takes the full height */
+}
 
 .App {
   position: relative;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
    
 }
+
 
 .logoImg img {
   width: 60px;
@@ -89,6 +94,7 @@ body, html {
   left: 50%; /* Centers the image horizontally */
   transform: translate(-50%, -50%); /* Corrects the offset caused by top and left */
   z-index: 2; /* Keeps the image above other content */
+  
 }
 
 .EventTimerSqaure{
@@ -222,6 +228,37 @@ body, html {
 .highlight {
   color: #D02F5E; /* Use the pink from JoinGroupSqaure for consistency */
   font-weight: bold;
+}
+
+.footer {
+  background-color: rgba(0, 0, 0, 0.6);  /* Dark background for contrast */
+  padding: 30px;  /* Increased padding for a better look */
+  text-align: center;  /* Centers text */
+  font-size: 16px;  /* Adjusted font size */
+  color: #fff;  /* White text for visibility */
+  position: absolute;
+  bottom: -70%;
+  left: 0;
+  width: 100%;  /* Full width */
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);  /* Adds a subtle shadow for depth */
+  z-index: 1000;  /* Ensures the footer stays at the bottom */
+}
+
+.footer p {
+  margin: 10px 0;
+  font-weight: normal;
+}
+
+.footer a {
+  color: #D02F5E;  /* Brighter pink for links */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #FFFF;  /* Change color on hover */
+  text-decoration: underline;  /* Underline on hover */
 }
 
 

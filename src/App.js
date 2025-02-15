@@ -140,6 +140,16 @@ return(
 );
 };
 
+const Foot = () => {
+  return (
+    <div className='footer'>
+      <p>Created by Women@CS - Empowering Women in Tech</p>
+      <p><a href="#privacy-policy">cm2165@hw.ac.uk</a> | <a href="#terms">po2010@hw.ac.uk</a></p>
+    </div>
+  );
+};
+
+
 function App() {
   return (
     <div className="App">
@@ -152,6 +162,11 @@ function App() {
       <body className="App-Body">
       {<MainBody />}
       </body>
+
+      <footer className='App-Footer'>
+      {<Foot />}
+      </footer>
+
     </div>
   );
 }
