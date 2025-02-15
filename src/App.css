@@ -23,6 +23,7 @@ body, html {
 
 .App {
   position: relative;
+   
 }
 
 .logoImg img {
@@ -70,14 +71,23 @@ body, html {
   padding: 15px 30px;
 }
 
-
-
-
 .navbar ul{
   list-style-type: none;
   display: flex;
   
 }
+
+.navbig-img {
+  width:600px;
+  height: 200px;
+  position: absolute; /* Ensures the image is placed relative to the nearest positioned ancestor */
+  top: 35%;  /* Centers the image vertically */
+  left: 50%; /* Centers the image horizontally */
+  transform: translate(-50%, -50%); /* Corrects the offset caused by top and left */
+  z-index: 2; /* Keeps the image above other content */
+}
+
+
 
 .gradient-bg {
   width: 100vw;

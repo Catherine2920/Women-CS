@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import logo from './Logo.png';
+import logoName from './logoName.png';
 
 const Background = () => {
   const [animationStarted, setAnimationStarted] = useState(false);
@@ -88,13 +89,24 @@ const NavBar = () => {
   );
 };
 
+const MainBody = () => {
+return(
+  <img src={logoName} alt="Profile" className="navbig-img" />
+);
+};
+
 function App() {
   return (
     <div className="App">
       <Background />
+      
       <header className="App-header">
         {<NavBar />}
       </header>
+
+      <body className="App-Body">
+      {<MainBody />}
+      </body>
     </div>
   );
 }
