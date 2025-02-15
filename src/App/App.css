@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+:root {
+  --backgroundColour: #1E1E1E;
+  --color1: 255, 105, 180;  /* Brighter Light Pink */
+  --color2: 208, 47, 94;    /* Brighter Dark Pink */
+  --color3: 0, 191, 255;    /* Brighter Blue */
+  --color4: 255, 20, 147;   /* Brighter Dark Purple */
+  --color5: 138, 43, 226;   /* Brighter Purple */
+  --color-interactive: 255, 0, 255;  /* Bright Magenta */
+  --blending: hard-light;
+  --circle-size: 300px; /* Slightly smaller size for dynamic effect */
+}
+
+body {
+  font-family: 'Orbitron', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100%;  /* Ensures content takes at least the full height */
+  background-color: var(--backgroundColour);
+  overflow-x: hidden;  /* Keeps horizontal overflow hidden */
+  overflow-y: auto;    /* Ensure vertical scrolling is allowed */
+}
+
+html {
+  height: 100%;  /* Ensure html takes the full height */
+}
+
+.App {
+  position: relative;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+   
+}
+
+
+
+

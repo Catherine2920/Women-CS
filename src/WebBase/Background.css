@@ -1,0 +1,101 @@
+
+.gradient-bg {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  
+  
+  .gradients-container {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    
+    filter: blur(40px);
+    
+  }
+  
+  
+  .g1, .g2, .g3, .g4, .g5, .interactive {
+    position: absolute;
+    width: var(--circle-size);
+    height: var(--circle-size);
+    border-radius: 50%;
+    mix-blend-mode: var(--blending);
+    transition: transform 0.1s ease-out, box-shadow 0.1s ease-out; /* Smooth transition for effects */
+  }
+  
+  .g1 {
+    background: radial-gradient(circle, rgba(var(--color1), 1) 0%, rgba(var(--color1), 0.3) 50%);
+    top: 0%;  /* Initially at top */
+    left: 20%; /* Initial left position */
+    animation: moveToNav 3s ease forwards;
+  }
+  
+  .g2 {
+    background: radial-gradient(circle, rgba(var(--color2), 1) 0%, rgba(var(--color2), 0.3) 50%);
+    top: 20%;
+    left: 60%;
+    animation: moveToNav 3s ease forwards 0.5s; /* Delay animation */
+  }
+  
+  .g3 {
+    background: radial-gradient(circle, rgba(var(--color3), 1) 0%, rgba(var(--color3), 0.3) 50%);
+    top: 70%;
+    left: 20%;
+    animation: moveToNav 3s ease forwards 1s; /* Delay animation */
+  }
+  
+  .g4 {
+    background: radial-gradient(circle, rgba(var(--color4), 1) 0%, rgba(var(--color4), 0.3) 50%);
+    top: 40%;
+    left: 50%;
+    animation: moveToNav 3s ease forwards 1.5s; /* Delay animation */
+  }
+  
+  .g5 {
+    background: radial-gradient(circle, rgba(var(--color5), 1) 0%, rgba(var(--color5), 0.3) 50%);
+    top: 30%;
+    left: 10%;
+    animation: moveToNav 3s ease forwards 2s; /* Delay animation */
+  }
+  
+  .interactive {
+    background: radial-gradient(circle, rgba(var(--color-interactive), 1) 0%, rgba(var(--color-interactive), 0.5) 50%);
+    position: absolute;
+    width: var(--circle-size);
+    height: var(--circle-size);
+    opacity: 0.8;
+    pointer-events: none;
+    
+  }
+  
+  @keyframes moveToNav {
+    0% {
+      transform: translateY(100vh); /* Start from below the screen */
+    }
+    100% {
+      transform: translateY(0); /* Move up to the top (simulating a nav bar position) */
+    }
+  }
+  
+  @keyframes moveInCircle {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(180deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  @keyframes moveVertical {
+    0% { transform: translateY(-30px); }
+    50% { transform: translateY(30px); }
+    100% { transform: translateY(-30px); }
+  }
+  
+  @keyframes moveHorizontal {
+    0% { transform: translateX(-30px); }
+    50% { transform: translateX(30px); }
+    100% { transform: translateX(-30px); }
+  }
+  
