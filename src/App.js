@@ -89,9 +89,29 @@ const NavBar = () => {
   );
 };
 
+const handleClick = () => {
+  alert("Button clicked!");
+};
+
 const MainBody = () => {
 return(
-  <img src={logoName} alt="Profile" className="navbig-img" />
+  <div className='mainBody'>
+  <img src={logoName} alt="Profile" className="Logobig-img" /> 
+  
+  {/* EVENT TIMER */}
+  <div className="EventTimerSqaure">
+    <h1>Upcoming Event!</h1>
+    <div className='EventTimer'>{/* count down goes here */}</div>
+  </div>
+
+  {/* FEEDBACK*/}
+  <div className="FeedbackSqaure">
+    <h1>Tell us how to improve</h1>
+    <button onClick={handleClick}>Help Us Learn</button>
+  </div>
+
+
+  </div>
 );
 };
 
