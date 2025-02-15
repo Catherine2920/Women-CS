@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
+import logo from './Logo.png';
 
 const Background = () => {
   const [animationStarted, setAnimationStarted] = useState(false);
@@ -73,6 +74,9 @@ const NavBar = () => {
   return(
   <nav className="navbar">
       <ul className="navbar-list">
+      <li className="logoImg">
+      <img src={logo} alt="Profile" className="nav-img" />
+        </li>
         <li><a href="#home">Home</a></li>
         <li><a href="#about">Events</a></li>
         <li><a href="#services">Contact</a></li>
