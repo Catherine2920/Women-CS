@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
-import logo from './Logo.png';
-import logoName from './logoName.png';
-import fakeQRCode from './FakeQRCode.png';
+import logo from '../Assests/Logo.png';
+import logoName from '../Assests/logoName.png';
+import fakeQRCode from '../Assests/FakeQRCode.png';
 
 const Background = () => {
   const [animationStarted, setAnimationStarted] = useState(false);
