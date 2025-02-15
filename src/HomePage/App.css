@@ -60,6 +60,21 @@ html {
   align-items: center;
 }
 
+.navbar button{
+  color: white;
+  background-color: #D02F5E;
+  border-radius: 5px;
+  border: none;
+  height: 30px;
+  width:70px;
+  cursor: pointer;
+}
+
+.navbar button:hover{
+   background-color: #ba2d52; /* Light pink on hover */
+  transform: scale(1.05);  /* Slight scale for interactive effect */
+}
+
 .navbar-list {
   display: flex;
   justify-content: center;

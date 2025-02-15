@@ -85,6 +85,7 @@ const NavBar = () => {
         <li><a href="#contact">Sponsors</a></li>
         <div className='profile/login'></div>
       </ul>
+      <button className='Signin'>Sign In</button>
   </nav>
 
   );
